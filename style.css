@@ -302,7 +302,7 @@
         /* Galeria de fotos finales */
     @media (max-width: 600px) {
         .galeria-grid img {
-        height: 180px; /* Un poco menos altas en móviles */
+        height: 250px; /* Un poco menos altas en móviles */
         }
     }
         
