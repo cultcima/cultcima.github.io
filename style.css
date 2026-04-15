@@ -302,8 +302,12 @@
         /* Galeria de fotos finales */
     @media (max-width: 600px) {
         .galeria-grid img {
-        height: 250px; /* Un poco menos altas en móviles */
+        height: 150px; 
+        weight: 150px 
         }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
     }
         
 /* Tamaño pequeño: celulares grandes */
