@@ -1,337 +1,170 @@
+/* Variables de Diseño UI */
+:root {
+    --verde-cultcima: #52B72A;
+    --rosa-mexicano: #E91E63;
+    --rosa-hover: #c2185b;
+    --dark-bg: #12181b;
+    --dark-card: #1f292d;
+    --texto-oscuro: #2b2b2b;
+    --fuente-principal: 'Outfit', sans-serif;
+    --fuente-serif: 'Playfair Display', serif;
+}
 
-        /* Colores personalizados */
-        :root {
-            --verde: #6dd341;
-            --rosa-mexicano: #e91e63;
-            --fondo-claro: #f4f4f4;
-        }
+body {
+    font-family: var(--fuente-principal);
+    color: var(--texto-oscuro);
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--fondo-claro);
-            color: #333;
-        }
+/* Navbar */
+.bg-dark-custom {
+    background-color: var(--dark-bg) !important;
+    backdrop-filter: blur(10px);
+}
 
-        header {
-            background-color: var(--verde);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-weight: bold;
-        }
+.brand-logo {
+    height: 42px;
+    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
+}
 
-        nav {
-            background-color: var(--fondo-claro);
-        }
+.nav-link {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
 
-        nav a {
-            color: rgb(0, 0, 0) !important;
-            padding: 15px 20px;
-            text-decoration: none;
-            border-radius: 12px;
-        }
+.nav-link:hover {
+    color: var(--verde-cultcima) !important;
+}
 
-        nav a:hover {
-            background-color: #999;
-            color: rgb(209, 8, 102);
-        }
+.btn-cta {
+    background-color: var(--rosa-mexicano);
+    color: white !important;
+    border-radius: 25px;
+    padding: 8px 20px !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
 
-        .banner {
-            background: url("./rsc/banners/bannerfraseramon.png") no-repeat center center;
-            background-size: cover; /* Que la imagen cubra siempre todo */ 
-            display: flex; /* Flexbox para centrar contenido */
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
-            text-align: center;
-            box-sizing: border-box; 
-            padding: 100px 20px;
-            font-size: 4vw; /* Tamaño de texto proporcional al ancho de la pantalla */
-            color: white;
-            position: relative;
-        }
+.btn-cta:hover {
+    background-color: var(--rosa-hover);
+    transform: translateY(-2px);
+}
 
-        .banner-text {
-        position: absolute;
-        right: 40px;
-        top: 50%;
-        transform: translateY(-70%);
-        font-size: 40px; /* Tamaño grande */
-        font-weight: bold;
-        color: rgb(255, 255, 255); /* Estilo de fondo */
-        pointer-events: none; /* No bloquea interacciones */
-        z-index: 0;
-        text-align: right;
-        line-height: 1.2;
-        max-width: 60%; /* Evita que se desborde */
-        }
+/* Hero Section */
+.hero-section {
+    min-height: 85vh;
+    background: url("./rsc/banners/bannerfraseramon.png") no-repeat center center/cover;
+    position: relative;
+}
 
-        .banner-secundario {
-            width: 100% !important; /* Ancho completo */
-            background: url("./rsc/images/bannersec.png") no-repeat center center;
-            background-size: cover;
-            display: block; /* Centrar contenido */
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            font-size: 1.5rem;
-        }
+.hero-overlay {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(135deg, rgba(81, 255, 0, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
 
+.hero-quote {
+    font-family: var(--fuente-serif);
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-style: italic;
+    max-width: 800px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.7);
+    line-height: 1.2;
+}
 
-        .section-title {
-            color: var(--rosa-mexicano);
-            border-bottom: 3px solid var(--rosa-mexicano);
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            text-align: center;
-        }
+/* Botones Personalizados */
+.btn-primary-custom {
+    background-color: var(--rosa-mexicano);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 
-        .imagen-tamaño {
-            width: 100%;  /* Esto hace que la imagen ocupe el 100% del contenedor */
-            max-width: 825px;  /* Limita el ancho máximo de la imagen a 825px */
-            height: auto;  /* Mantiene la proporción de la imagen */
-            align-content: center;
-            display: block;  /* Convierte la imagen en un bloque */
-            margin: 0 auto;
-        }
+.btn-primary-custom:hover {
+    background-color: var(--rosa-hover);
+    color: white;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+}
 
-        .btn-custom {
-            background-color: var(--rosa-mexicano);
-            color: white;
-            border: none;
-            font-weight: 600; /* Grosor del botón */
-            border-radius: 30px;
-            position: relative;
-            z-index: 1; /* se pone al frente */
-        }
+.btn-whatsapp-header {
+    background-color: #25D366;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    text-decoration: none;
+}
 
-        .btn-custom:hover {
-            background-color: #b4b4b4;
-        }
+.btn-whatsapp-header:hover {
+    background-color: #1ebc57;
+    color: white;
+}
 
-        .carousel-item img {
-            width: 100%;
-            max-height: 600px;
-            align-self: center;
-            object-fit: cover;
-            align-items: center;
-            text-align: center;
-        }
+/* Títulos de Sección */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--dark-bg);
+    position: relative;
+    display: inline-block;
+}
 
-        #destinos .project-card img {
-        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-        height: 400px; /* Altura específica para que todas sean uniformes */
-        object-fit: cover; /* Ajusta la imagen para que se recorte adecuadamente */
-        display: block; /* Asegura que la imagen sea un bloque */
-        margin: 0 auto; /* Centra la imagen horizontalmente */
-    }
+.bg-success-custom {
+    background-color: var(--verde-cultcima) !important;
+}
 
-    #destinos .project-card {
-        text-align: center; /* Centra el texto debajo de las imágenes */
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra para mejor visibilidad */
-        border-radius: 10px; /* Bordes redondeados */
-    }
+/* Cards de Destinos */
+.card-destination {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    #destinos h2.section-title {
-        text-align: center; /* Centra el título de la sección */
-        margin-bottom: 40px;
-    }
+.card-destination:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
 
-    #destinos .row {
-        justify-content: center; /* Centra las columnas dentro de la fila */
-    }
+.card-img-wrapper img {
+    height: 240px;
+    object-fit: cover;
+}
 
-    #destinos .col-md-3 {
-        max-width: 400px; /* Limita el ancho de las columnas */
-        flex: 0 0 auto; /* Ajusta el comportamiento del flexbox */
-    }
+/* Contenedor del Mapa Interactivo */
+#mapa-cultural {
+    height: 480px;
+    width: 100%;
+    z-index: 1;
+}
 
-    .galeria-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 16px;
-    }
+/* Galería Grid con Efecto Zoom */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
 
-    .galeria-grid img {
-        width: 100%;
-        height: 250px; /* Altura uniforme para todas las imágenes */
-        object-fit: cover; /* Recorta manteniendo proporción */
-        border-radius: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.galeria-item {
+    overflow: hidden;
+    border-radius: 12px;
+}
 
-    .galeria-grid img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-    }
+.galeria-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
 
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--verde);
-            color: white;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;  /* Asegura que el contenido no se desborde */
-        }
-
-        .image-container {
-            position: relative;  /* Necesario para poder posicionar el texto sobre la imagen */
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 200px;
-            padding: 6px;
-            display: block;  /* Asegura que la imagen ocupe todo el espacio */
-        }
-
-        .text-overlay {
-            font-family: Arial, Helvetica, sans-serif;
-            font-style: bold;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);  /* Centra el texto en la imagen */
-            color: white;
-            text-align: center;
-            /*background-color: rgba(0, 0, 0, 0.5);  /* Fondo semitransparente para mejorar la visibilidad del texto */
-            padding: 10px;
-            width: 90%;  /* Limita el ancho del texto */
-        }
-
-        .text-overlay h5 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .text-overlay p {
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        form {
-        display: flex;
-        flex-direction: column; /* Organización vertical */
-        gap: 15px; /* Espaciado entre campos */
-        background-color: white; /* Fondo blanco */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 500px; /* Limitar ancho del formulario */
-        margin: 0 auto; /* Centrar formulario en la página */
-    }
-
-    .form-group {
-        display: flex;
-        flex-direction: column; /* Etiqueta arriba del campo */
-        gap: 5px;
-    }
-
-    .form-group label {
-        font-weight: 600;
-        color: var(--verde); /* Color verde del tema */
-    }
-
-    input, textarea, button {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-family: 'Montserrat', sans-serif; /* Fuente consistente */
-    }
-
-    textarea {
-        resize: none; /* Evitar redimensionar */
-    }
-
-    button {
-        background-color: var(--rosa-mexicano);
-        color: white;
-        border: none;
-        font-weight: 600;
-        cursor: pointer;
-        padding: 10px 20px;
-        align-self: center; /* Centrar botón */
-    }
-
-    button:hover {
-        background-color: #b4b4b4; /* Variación al pasar el cursor */
-    }
-
-    .noticias-container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .noticia {
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
-        }
-        .noticia:last-child {
-            border-bottom: none;
-        }
-        .noticia h3 {
-            margin: 0 0 5px;
-            color: #333;
-        }
-        .noticia p {
-            margin: 0;
-            color: #666;
-        }
-        .fecha {
-            font-size: 0.8em;
-            color: #999;
-        }
-
-    .banner a {
-        font-size: 0.9rem; /* Reduce el tamaño del botón */
-        padding: 8px 12px;
-        border-radius: 20px;
-    }
-
-        /* Galeria de fotos finales */
-    @media (max-width: 600px) {
-        .galeria-grid img {
-        height: 150px; 
-        weight: 150px 
-        }
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 8px;
-    }
-        
-/* Tamaño pequeño: celulares grandes */
-    @media (max-width: 768px) {
-    .banner-text {
-        font-size: 28px;
-        right: 10px;
-        max-width: 85%;
-    }
-    }
-
-    /* Tamaño muy pequeño: celulares chicos */
-    @media (max-width: 480px) {
-    .banner-text {
-        font-size: 16px;
-        right: 10px;
-        max-width: 90%;
-        text-align: right;
-    }
-
-    .banner {
-        padding: 20px;
-        height: auto;
-    }
-    }
-
-
+/* Tarjetas de Paseos */
+.bg-secondary-custom {
+    background-color: var(--dark-card);
+    border: 1px solid rgba(255,255,255,0.08);
+}
