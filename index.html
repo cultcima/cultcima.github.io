@@ -1,380 +1,1297 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CULTCIMA | Paseos Culturales y Visitas Guiadas en CDMX</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-    <!-- Made by Razolence -->
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Leaflet.js (Mapa Interactivo Open-Source) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navegación -->
+    <!-- =========================
+         NAVEGACIÓN
+    ========================== -->
+
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark-custom">
+
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./rsc/banners/textocultcima.png" alt="Cultcima Logo" class="brand-logo">
+
+            <a class="navbar-brand d-flex align-items-center" href="#inicio">
+                <img
+                    src="./rsc/banners/textocultcima.png"
+                    alt="Cultcima Logo"
+                    class="brand-logo">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+
+            <button
+                class="navbar-toggler border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive">
+
                 <i class="fas fa-bars text-white fs-3"></i>
+
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarResponsive">
+
                 <ul class="navbar-nav ms-auto text-uppercase fw-semibold">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mapa">Rutas Interactivas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#paseos">Paseos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link btn-cta ms-lg-3" href="#contacto">Reservar Visita</a></li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinos">
+                            Destinos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mapa">
+                            Rutas Interactivas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paseos">
+                            Paseos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#videos">
+                            Videos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#galeria">
+                            Galería
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link btn-cta ms-lg-3"
+                            href="#contacto">
+                            Reservar Visita
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (Frase requerida) -->
-    <header id="inicio" class="hero-section position-relative d-flex align-items-center justify-content-center text-white">
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header
+        id="inicio"
+        class="hero-section position-relative d-flex align-items-center justify-content-center text-white">
+
         <div class="hero-overlay"></div>
-        <div class="container position-relative z-index-2 text-center text-md-end my-5">
+
+        <div
+            class="container position-relative z-index-2 text-center text-md-end my-5">
+
             <blockquote class="hero-quote ms-auto">
-                “Soy un viajero y navegante, cada día descubro una región... de mi alma.”
-                <cite class="d-block mt-2 fs-5 fw-light">— Khalil Gibran</cite>
+
+                “Soy un viajero y navegante, cada día descubro una región...
+                de mi alma.”
+
+                <cite class="d-block mt-2 fs-5 fw-light">
+                    — Khalil Gibran
+                </cite>
+
             </blockquote>
+
             <div class="mt-4">
-                <a href="#destinos" class="btn btn-primary-custom btn-lg me-2 my-2">Explorar Destinos</a>
-                <a href="https://wa.me/525591916604" target="_blank" class="btn btn-whatsapp-header btn-lg my-2"><i class="fab fa-whatsapp me-2"></i> WhatsApp Directo</a>
+
+                <a
+                    href="#destinos"
+                    class="btn btn-primary-custom btn-lg me-2 my-2">
+
+                    Explorar Destinos
+
+                </a>
+
+                <a
+                    href="https://wa.me/525591916604"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp-header btn-lg my-2">
+
+                    <i class="fab fa-whatsapp me-2"></i>
+                    WhatsApp Directo
+
+                </a>
+
             </div>
+
         </div>
+
     </header>
 
-    <!-- Presentación en Video (Manteniendo el video especificado) -->
+
+    <!-- =========================
+         VIDEO PRINCIPAL
+    ========================== -->
+
     <section class="py-5 bg-light">
+
         <div class="container">
+
             <div class="text-center mb-4">
-                <span class="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2">Conócenos</span>
-                <h1></h1>
-                <h2 class="section-title">Nuestra Experiencia en Video</h2>
+
+                <span class="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2">
+                    Conócenos
+                </span>
+
+                <h2 class="section-title">
+                    Nuestra Experiencia en Video
+                </h2>
+
             </div>
+
             <div class="row justify-content-center">
+
                 <div class="col-lg-8">
+
                     <div class="video-card shadow-lg rounded-4 overflow-hidden">
-                        <video controls loop playsinline class="w-100 d-block">
-                            <source src="./rsc/images/Videocultcima.mp4" type="video/mp4" />
+
+                        <video
+                            controls
+                            loop
+                            playsinline
+                            class="w-100 d-block">
+
+                            <source
+                                src="./rsc/images/Videocultcima.mp4"
+                                type="video/mp4">
+
                             Tu navegador no soporta la reproducción de video.
+
                         </video>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Quiénes Somos / Misión y Visión -->
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
     <section id="nosotros" class="py-5">
+
         <div class="container py-4">
+
             <div class="row align-items-center g-5">
+
                 <div class="col-lg-6">
-                    <span class="badge bg-success-custom text-uppercase px-3 py-2 rounded-pill mb-2">Pasión por la Historia</span>
-                    <h2 class="display-6 fw-bold mb-4">Descubre la CDMX con Guías Profesionales</h2>
-                    <p class="lead text-muted">Somos un grupo de profesionales apasionados por transmitir la historia, las costumbres, colores y sabores de la riqueza cultural mexicana.</p>
-                    <p>Desarrollamos planes de visitas guiadas para grupos organizados, mostrando el patrimonio artístico, histórico y monumental de la Zona Metropolitana de la Ciudad de México y sus Pueblos Mágicos.</p>
-                    
+
+                    <span class="badge bg-success-custom text-uppercase px-3 py-2 rounded-pill mb-2">
+                        Pasión por la Historia
+                    </span>
+
+                    <h2 class="display-6 fw-bold mb-4">
+                        Descubre la CDMX con Guías Profesionales
+                    </h2>
+
+                    <p class="lead text-muted">
+                        Somos un grupo de profesionales apasionados por
+                        transmitir la historia, las costumbres, colores y
+                        sabores de la riqueza cultural mexicana.
+                    </p>
+
+                    <p>
+                        Desarrollamos planes de visitas guiadas para grupos
+                        organizados, mostrando el patrimonio artístico,
+                        histórico y monumental de la Zona Metropolitana de
+                        la Ciudad de México y sus Pueblos Mágicos.
+                    </p>
+
                     <div class="row g-3 mt-3">
+
                         <div class="col-6">
+
                             <div class="p-3 border-start border-4 border-danger bg-light rounded">
-                                <h5 class="fw-bold mb-1">Guías Expertos</h5>
-                                <small class="text-muted">Narración profesional y cultural</small>
+
+                                <h5 class="fw-bold mb-1">
+                                    Guías Expertos
+                                </h5>
+
+                                <small class="text-muted">
+                                    Narración profesional y cultural
+                                </small>
+
                             </div>
+
                         </div>
+
                         <div class="col-6">
+
                             <div class="p-3 border-start border-4 border-success bg-light rounded">
-                                <h5 class="fw-bold mb-1">Grupos Personalizados</h5>
-                                <small class="text-muted">Experiencias a tu medida</small>
+
+                                <h5 class="fw-bold mb-1">
+                                    Grupos Personalizados
+                                </h5>
+
+                                <small class="text-muted">
+                                    Experiencias a tu medida
+                                </small>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="col-lg-6 text-center">
-                    <img src="./rsc/images/fotos varios.png" alt="Experiencias Culturales" class="img-fluid rounded-4 shadow-lg">
+
+                    <img
+                        src="./rsc/images/fotos varios.png"
+                        alt="Experiencias Culturales"
+                        class="img-fluid rounded-4 shadow-lg">
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Destinos Destacados (Foco en Zona Metropolitana y Museos) -->
+
+    <!-- =========================
+         DESTINOS
+    ========================== -->
+
     <section id="destinos" class="py-5 bg-light">
+
         <div class="container">
+
             <div class="text-center mb-5">
-                <h2 class="section-title">Principales Recorridos y Museos</h2>
+
+                <h2 class="section-title">
+                    Principales Recorridos y Museos
+                </h2>
+
             </div>
-            
+
             <div class="row g-4">
-                <!-- Castillo de Chapultepec -->
+
+                <!-- Chapultepec -->
                 <div class="col-md-6 col-lg-4">
+
                     <div class="card card-destination h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
                         <div class="card-img-wrapper position-relative">
-                            <img src="./rsc/images/Chapultepec.png" class="card-img-top" alt="Castillo de Chapultepec">
-                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">Bosque de Chapultepec</span>
+
+                            <img
+                                src="./rsc/images/Chapultepec.png"
+                                class="card-img-top"
+                                alt="Castillo de Chapultepec">
+
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                                Bosque de Chapultepec
+                            </span>
+
                         </div>
+
                         <div class="card-body p-4">
-                            <h4 class="fw-bold">Castillo de Chapultepec</h4>
-                            <h6 class="text-muted mb-3">Museo Nacional de Historia</h6>
-                            <p class="card-text text-muted">Joya histórica del siglo XVIII construida sobre el cerro sagrado. Residencia imperial y presidencial con colecciones artísticas y vistas incomparables.</p>
+
+                            <h4 class="fw-bold">
+                                Castillo de Chapultepec
+                            </h4>
+
+                            <h6 class="text-muted mb-3">
+                                Museo Nacional de Historia
+                            </h6>
+
+                            <p class="card-text text-muted">
+                                Joya histórica del siglo XVIII construida
+                                sobre el cerro sagrado. Residencia imperial
+                                y presidencial con colecciones artísticas
+                                y vistas incomparables.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
 
                 <!-- Antropología -->
                 <div class="col-md-6 col-lg-4">
+
                     <div class="card card-destination h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
                         <div class="card-img-wrapper position-relative">
-                            <img src="./rsc/images/Antropología.png" class="card-img-top" alt="Museo de Antropología">
-                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">Cultura Ancestral</span>
+
+                            <img
+                                src="./rsc/images/Antropología.png"
+                                class="card-img-top"
+                                alt="Museo Nacional de Antropología">
+
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                                Cultura Ancestral
+                            </span>
+
                         </div>
+
                         <div class="card-body p-4">
-                            <h4 class="fw-bold">Museo de Antropología</h4>
-                            <h6 class="text-muted mb-3">Museo Nacional de Antropología</h6>
-                            <p class="card-text text-muted">Uno de los museos más importantes del mundo. Alberga la Piedra del Sol y reliquias invaluables de las civilizaciones azteca y maya.</p>
+
+                            <h4 class="fw-bold">
+                                Museo de Antropología
+                            </h4>
+
+                            <h6 class="text-muted mb-3">
+                                Museo Nacional de Antropología
+                            </h6>
+
+                            <p class="card-text text-muted">
+                                Uno de los museos más importantes de México,
+                                con piezas fundamentales del patrimonio
+                                arqueológico y cultural del país.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- Museo Soumaya y Los Pinos -->
+
+                <!-- Soumaya -->
                 <div class="col-md-6 col-lg-4">
+
                     <div class="card card-destination h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
                         <div class="card-img-wrapper position-relative">
-                            <img src="./rsc/images/Soumaya.png" class="card-img-top" alt="Museo Soumaya y Los Pinos">
-                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">Arte Moderno y Político</span>
+
+                            <img
+                                src="./rsc/images/Soumaya.png"
+                                class="card-img-top"
+                                alt="Museo Soumaya y Los Pinos">
+
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                                Arte y Cultura
+                            </span>
+
                         </div>
+
                         <div class="card-body p-4">
-                            <h4 class="fw-bold">Museo Soumaya y Los Pinos</h4>
-                            <h6 class="text-muted mb-3">Polanco & Complejo Cultural</h6>
-                            <p class="card-text text-muted">Explora la arquitectura vanguardista de Plaza Carso junto al acervo escultórico de Rodin y recorre la histórica residencia presidencial de Los Pinos.</p>
+
+                            <h4 class="fw-bold">
+                                Museo Soumaya y Los Pinos
+                            </h4>
+
+                            <h6 class="text-muted mb-3">
+                                Polanco & Complejo Cultural
+                            </h6>
+
+                            <p class="card-text text-muted">
+                                Explora la arquitectura de Plaza Carso,
+                                el acervo artístico del Museo Soumaya y
+                                la histórica residencia presidencial de
+                                Los Pinos.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
 
-                <!-- Centro Histórico y Catedral -->
+
+                <!-- Centro Histórico -->
                 <div class="col-md-6 col-lg-4">
+
                     <div class="card card-destination h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
                         <div class="card-img-wrapper position-relative">
-                            <img src="./rsc/images/Centro Historico.png" class="card-img-top" alt="Catedral y Centro Histórico">
-                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">Casco Antiguo</span>
+
+                            <img
+                                src="./rsc/images/Centro Historico.png"
+                                class="card-img-top"
+                                alt="Catedral y Centro Histórico">
+
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                                Casco Antiguo
+                            </span>
+
                         </div>
+
                         <div class="card-body p-4">
-                            <h4 class="fw-bold">Catedral y Centro Histórico</h4>
-                            <h6 class="text-muted mb-3">Zócalo y Bellas Artes</h6>
-                            <p class="card-text text-muted">Recorrido por el corazón del imperio Azteca y Virreinal: Zócalo, Catedral Metropolitana, Templo Mayor y el majestuoso Palacio de Bellas Artes.</p>
+
+                            <h4 class="fw-bold">
+                                Catedral y Centro Histórico
+                            </h4>
+
+                            <h6 class="text-muted mb-3">
+                                Zócalo y Bellas Artes
+                            </h6>
+
+                            <p class="card-text text-muted">
+                                Recorrido por el corazón histórico de la
+                                Ciudad de México: Zócalo, Catedral,
+                                Templo Mayor y Palacio de Bellas Artes.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
 
                 <!-- Teotihuacán -->
                 <div class="col-md-6 col-lg-4">
+
                     <div class="card card-destination h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+
                         <div class="card-img-wrapper position-relative">
-                            <img src="./rsc/images/Teotihuacan.png" class="card-img-top" alt="Teotihuacán">
-                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">Zona Arqueológica</span>
+
+                            <img
+                                src="./rsc/images/Teotihuacan.png"
+                                class="card-img-top"
+                                alt="Teotihuacán">
+
+                            <span class="badge bg-dark position-absolute top-0 end-0 m-3">
+                                Zona Arqueológica
+                            </span>
+
                         </div>
+
                         <div class="card-body p-4">
-                            <h4 class="fw-bold">Teotihuacán de Arista</h4>
-                            <h6 class="text-muted mb-3">Pirámides del Sol y de la Luna</h6>
-                            <p class="card-text text-muted">Patrimonio de la Humanidad. Un viaje fascinante hacia la mitológica "Ciudad de los Dioses" en las afueras del valle.</p>
+
+                            <h4 class="fw-bold">
+                                Teotihuacán de Arista
+                            </h4>
+
+                            <h6 class="text-muted mb-3">
+                                Pirámides del Sol y de la Luna
+                            </h6>
+
+                            <p class="card-text text-muted">
+                                Un viaje fascinante hacia la llamada
+                                "Ciudad de los Dioses", uno de los grandes
+                                sitios arqueológicos de México.
+                            </p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Mapa Interactivo de Recorridos -->
+
+    <!-- =========================
+         MAPA
+    ========================== -->
+
     <section id="mapa" class="py-5">
+
         <div class="container">
+
             <div class="text-center mb-4">
-                <h2 class="section-title">Mapa Interactivo de Puntos Culturales</h2>
-                <p class="text-muted">Haz clic en los marcadores para conocer los detalles de cada parada estratégica de nuestras visitas guiadas.</p>
+
+                <h2 class="section-title">
+                    Mapa Interactivo de Puntos Culturales
+                </h2>
+
+                <p class="text-muted">
+                    Haz clic en los marcadores para conocer los detalles
+                    de cada parada estratégica de nuestras visitas guiadas.
+                </p>
+
             </div>
+
             <div class="row justify-content-center">
+
                 <div class="col-lg-10">
-                    <div id="mapa-cultural" class="shadow-lg rounded-4 overflow-hidden"></div>
+
+                    <div
+                        id="mapa-cultural"
+                        class="shadow-lg rounded-4 overflow-hidden">
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Paseos Temáticos -->
+
+    <!-- =========================
+         PASEOS
+    ========================== -->
+
     <section id="paseos" class="py-5 bg-dark text-white">
+
         <div class="container">
+
             <div class="text-center mb-5">
-                <h2 class="section-title text-white">Paseos Culturales</h2>
+
+                <h2 class="section-title text-white">
+                    Paseos Culturales
+                </h2>
+
             </div>
+
             <div class="row g-4">
+
                 <div class="col-md-4">
+
                     <div class="tour-card p-4 rounded-4 bg-secondary-custom">
+
                         <i class="fas fa-landmark text-warning fs-1 mb-3"></i>
-                        <h5>Historias del Centro Histórico</h5>
-                        <p class="text-light-50">Explora la arquitectura colonial, murales virreinales y pasajes subterráneos llenos de historia.</p>
+
+                        <h5>
+                            Historias del Centro Histórico
+                        </h5>
+
+                        <p class="text-light-50">
+                            Explora la arquitectura colonial, murales
+                            virreinales y pasajes llenos de historia.
+                        </p>
+
                     </div>
+
                 </div>
+
                 <div class="col-md-4">
+
                     <div class="tour-card p-4 rounded-4 bg-secondary-custom">
+
                         <i class="fas fa-ghost text-danger fs-1 mb-3"></i>
-                        <h5>Ruta de Leyendas CDMX</h5>
-                        <p class="text-light-50">Recorrido nocturno guiado por un narrador caracterizado descubriendo mitos y misterios antiguos.</p>
+
+                        <h5>
+                            Ruta de Leyendas CDMX
+                        </h5>
+
+                        <p class="text-light-50">
+                            Recorrido guiado descubriendo mitos, leyendas
+                            y misterios de la Ciudad de México.
+                        </p>
+
                     </div>
+
                 </div>
+
                 <div class="col-md-4">
+
                     <div class="tour-card p-4 rounded-4 bg-secondary-custom">
+
                         <i class="fas fa-tree text-success fs-1 mb-3"></i>
-                        <h5>Coyoacán, San Ángel y Tlalpan</h5>
-                        <p class="text-light-50">Calles empedradas, casonas históricas y ambiente bohemio en los barrios de mayor tradición sureña.</p>
+
+                        <h5>
+                            Coyoacán, San Ángel y Tlalpan
+                        </h5>
+
+                        <p class="text-light-50">
+                            Calles empedradas, casonas históricas y ambiente
+                            bohemio en los barrios tradicionales del sur.
+                        </p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Galería con Filtros / Grid interactivo -->
-    <section id="galeria" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Momentos Capturados</h2>
-            </div>
-            <div class="galeria-grid">
-                <div class="galeria-item"><img src="./rsc/Galeria/castillomaximiliano.jpg" alt="Castillo Maximiliano" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/CastilloChapultepec.jpg" alt="Castillo Chapultepec" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/muralchapultepec.jpg" alt="Mural Chapultepec" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/ramoncarruaje.jpg" alt="Carruaje Histórico" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Rocío.jpg" alt="Paseantes Cultcima" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Paseantes.jpg" alt="Grupo de Visita" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Nochebuenas.jpg" alt="Jardines" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Grupo4.jpg" alt="Leyendas" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/BannerRamonGrupo.png" alt="Grupo de Recorrido" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Ramon7.jpg" alt="Guía" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Ramon2.jpg" alt="Guía" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Ramón5.jpg" alt="Guía en Recorrido" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Ramón13.jpg" alt="Guía en Recorrido" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Marranito.jpg" alt="Escultura de Marranito" class="img-fluid rounded-3"></div>
-                <div class="galeria-item"><img src="./rsc/Galeria/Ramón3.jpg" alt="Guía en Recorrido" class="img-fluid rounded-3"></div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Noticias -->
-    <section class="py-5 bg-light">
+    <!-- =========================
+         VIDEOS / REELS INSTAGRAM
+    ========================== -->
+
+    <section id="videos" class="py-5 bg-light">
+
         <div class="container">
+
             <div class="text-center mb-5">
-                <h2 class="section-title">Últimas Noticias y Recomendaciones</h2>
+
+                <span class="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2">
+                    Vive CULTCIMA
+                </span>
+
+                <h2 class="section-title">
+                    Historias que cobran vida
+                </h2>
+
+                <p class="text-muted mx-auto mt-3 video-intro">
+                    Conoce algunos de nuestros recorridos, historias y
+                    experiencias culturales a través de nuestros videos.
+                </p>
+
             </div>
+
             <div class="row g-4 justify-content-center">
-                <div id="noticias">
-            <div class="noticia">
-                <h3><a href="https://cdmxsecreta.com/que-hacer-cdmx-fin-de-semana/" target="_blank">Qué hacer en CDMX este fin de semana</a></h3>
-                <p>Descubre los mejores planes y actividades para disfrutar en la Ciudad de México este fin de semana.</p>
-                <span class="fecha">23 de Octubre de 2024</span>
+
+                <!-- REEL 1 -->
+
+                <div class="col-md-6">
+
+                    <div class="instagram-video-card">
+
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DeF5KjfR9yz/"
+                            data-instgrm-version="14">
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REEL 2 -->
+
+                <div class="col-md-6">
+
+                    <div class="instagram-video-card">
+
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/Dduq9jDxGZC/"
+                            data-instgrm-version="14">
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REEL 3 -->
+
+                <div class="col-md-6">
+
+                    <div class="instagram-video-card">
+
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DdsOBT0RJaZ/"
+                            data-instgrm-version="14">
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REEL 4 -->
+
+                <div class="col-md-6">
+
+                    <div class="instagram-video-card">
+
+                        <blockquote
+                            class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DdX4dd4x_TP/"
+                            data-instgrm-version="14">
+
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="noticia">
-                <h3><a href="https://www.telediario.mx/comunidad/torre-latinoamericana-ofrece-recorrido-de-leyendas-de-difuntos" target="_blank">Torre Latinoamericana ofrece recorrido de leyendas de difuntos</a></h3>
-                <p>Conoce la historia y las leyendas que envuelven la Torre Latinoamericana en un recorrido especial dedicado a las almas en pena.</p>
-                <span class="fecha">26 de Octubre de 2024</span>
-            </div>
-            <div class="noticia">
-                <h3><a href="https://www.chilango.com/que-hacer/torre-latino-cdmx-tendra-noches-leyendas-dia-de-muertos/" target="_blank">Torre Latino tendrá noches de leyendas por Día de Muertos</a></h3>
-                <p>Vive una experiencia única con relatos de terror y misterio en la emblemática Torre Latinoamericana.</p>
-                <span class="fecha">24 de Octubre de 2024</span>
-            </div>
-            <div class="noticia">
-                <h3><a href="https://www.facebook.com/MiradorTorreLatino/posts/leyendas-de-difuntos-por-las-entra%C3%B1as-de-la-torre-latinoqu%C3%A9-te-espera-recorrido-/958786222958875/" target="_blank">Leyendas de difuntos en la Torre Latino</a></h3>
-                <p>Un recorrido especial por las entrañas de la Torre Latinoamericana con historias escalofriantes.</p>
-                <span class="fecha">23 de Octubre de 2024</span>
+
         </div>
-            </div>
-        </div>
+
     </section>
 
-    <!-- Formulario de Contacto y Reserva -->
-    <section id="contacto" class="py-5">
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+
+    <section id="galeria" class="py-5">
+
         <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Momentos Capturados
+                </h2>
+
+            </div>
+
+            <div class="galeria-grid">
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/castillomaximiliano.jpg"
+                        alt="Castillo Maximiliano"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/CastilloChapultepec.jpg"
+                        alt="Castillo Chapultepec"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/muralchapultepec.jpg"
+                        alt="Mural Chapultepec"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/ramoncarruaje.jpg"
+                        alt="Carruaje Histórico"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Rocío.jpg"
+                        alt="Paseantes Cultcima"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Paseantes.jpg"
+                        alt="Grupo de Visita"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Nochebuenas.jpg"
+                        alt="Jardines"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Grupo4.jpg"
+                        alt="Leyendas"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/BannerRamonGrupo.png"
+                        alt="Grupo de Recorrido"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Ramon7.jpg"
+                        alt="Guía"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Ramon2.jpg"
+                        alt="Guía"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Ramón5.jpg"
+                        alt="Guía en Recorrido"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Ramón13.jpg"
+                        alt="Guía en Recorrido"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Marranito.jpg"
+                        alt="Escultura de Marranito"
+                        class="img-fluid rounded-3">
+                </div>
+
+                <div class="galeria-item">
+                    <img
+                        src="./rsc/Galeria/Ramón3.jpg"
+                        alt="Guía en Recorrido"
+                        class="img-fluid rounded-3">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO / RESERVA
+    ========================== -->
+
+    <section id="contacto" class="py-5">
+
+        <div class="container">
+
             <div class="row justify-content-center g-5">
+
+                <!-- INFORMACIÓN -->
+
                 <div class="col-lg-5">
-                    <span class="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2">Atención Personalizada</span>
-                    <h2 class="display-6 fw-bold mb-4">¿Listo para explorar la ciudad?</h2>
-                    <p class="text-muted">Ponte en contacto con <strong>Juan Ramón Jiménez Villarreal</strong> para agendar tu recorrido privado o grupal.</p>
-                    
+
+                    <span class="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2">
+                        Atención Personalizada
+                    </span>
+
+                    <h2 class="display-6 fw-bold mb-4">
+                        ¿Listo para explorar la ciudad?
+                    </h2>
+
+                    <p class="text-muted">
+
+                        Ponte en contacto con
+                        <strong>Juan Ramón Jiménez Villarreal</strong>
+                        para agendar tu recorrido privado o grupal.
+
+                    </p>
+
+
+                    <!-- WhatsApp -->
+
                     <div class="d-flex align-items-center mb-3">
-                        <div class="icon-square me-3 bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
-                            <i class="fas fa-phone"></i>
+
+                        <div
+                            class="icon-square me-3 bg-success text-white rounded-circle d-flex align-items-center justify-content-center">
+
+                            <i class="fab fa-whatsapp"></i>
+
                         </div>
+
                         <div>
-                            <small class="text-muted d-block">Teléfono / WhatsApp</small>
-                            <a href="https://wa.me/525591916604" class="fw-bold text-dark text-decoration-none">+52 55 9191 6604</a>
+
+                            <small class="text-muted d-block">
+                                Teléfono / WhatsApp
+                            </small>
+
+                            <a
+                                href="https://wa.me/525591916604"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="fw-bold text-dark text-decoration-none">
+
+                                +52 55 9191 6604
+
+                            </a>
+
                         </div>
+
                     </div>
+
+
+                    <!-- Correo -->
 
                     <div class="d-flex align-items-center mb-4">
-                        <div class="icon-square me-3 bg-success-custom text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+
+                        <div
+                            class="icon-square me-3 bg-danger text-white rounded-circle d-flex align-items-center justify-content-center">
+
                             <i class="fas fa-envelope"></i>
+
                         </div>
+
                         <div>
-                            <small class="text-muted d-block">Correo Electrónico</small>
-                            <a href="mailto:cultcima@yahoo.com" class="fw-bold text-dark text-decoration-none">cultcima@yahoo.com</a>
+
+                            <small class="text-muted d-block">
+                                Correo Electrónico
+                            </small>
+
+                            <a
+                                href="mailto:cultcima@yahoo.com"
+                                class="fw-bold text-dark text-decoration-none">
+
+                                cultcima@yahoo.com
+
+                            </a>
+
                         </div>
+
                     </div>
 
-                    <div class="d-flex gap-2">
-                        <a href="https://www.facebook.com/profile.php?id=100070152943406" target="_blank" class="btn btn-outline-primary rounded-pill px-4"><i class="fab fa-facebook-f me-2"></i>Facebook</a>
-                        <a href="https://wa.me/525591916604" target="_blank" class="btn btn-success rounded-pill px-4"><i class="fab fa-whatsapp me-2"></i>WhatsApp</a>
+
+                    <!-- Redes -->
+
+                    <div class="d-flex gap-2 flex-wrap">
+
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100070152943406"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-primary rounded-pill px-4">
+
+                            <i class="fab fa-facebook-f me-2"></i>
+                            Facebook
+
+                        </a>
+
+                        <a
+                            href="https://wa.me/525591916604"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-success rounded-pill px-4">
+
+                            <i class="fab fa-whatsapp me-2"></i>
+                            WhatsApp
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/cultcima/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-instagram rounded-pill px-4">
+
+                            <i class="fab fa-instagram me-2"></i>
+                            Instagram
+
+                        </a>
+
+
                     </div>
+
                 </div>
+
+
+                <!-- FORMULARIO WHATSAPP -->
 
                 <div class="col-lg-6">
-                    <div class="card border-0 shadow-lg p-4 rounded-4">
-                        <h4 class="fw-bold mb-3">Solicitar Información o Reserva</h4>
-                        <form action="mailto:cultcima@yahoo.com" method="post" enctype="text/plain">
+
+                    <div class="card border-0 shadow-lg p-4 rounded-4 reservation-card">
+
+                        <div class="mb-4">
+
+                            <span class="badge bg-success-custom text-uppercase px-3 py-2 rounded-pill mb-2">
+                                Reserva tu recorrido
+                            </span>
+
+                            <h4 class="fw-bold mb-2">
+                                Solicitar información
+                            </h4>
+
+                            <p class="text-muted mb-0">
+
+                                Completa los datos y envíanos tu solicitud
+                                directamente por WhatsApp.
+
+                            </p>
+
+                        </div>
+
+
+                        <form id="whatsappForm">
+
+
+                            <!-- Nombre -->
+
                             <div class="mb-3">
-                                <label for="nombre" class="form-label fw-semibold">Nombre Completo</label>
-                                <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" placeholder="Ej. Rocío Hernández" required>
+
+                                <label
+                                    for="nombre"
+                                    class="form-label fw-semibold">
+
+                                    Nombre completo
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control form-control-lg"
+                                    id="nombre"
+                                    placeholder="Ej. Rocío Hernández"
+                                    required>
+
                             </div>
+
+
+                            <!-- Fecha + Personas -->
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label
+                                        for="fecha"
+                                        class="form-label fw-semibold">
+
+                                        Fecha deseada
+
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control form-control-lg"
+                                        id="fecha"
+                                        required>
+
+                                </div>
+
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label
+                                        for="personas"
+                                        class="form-label fw-semibold">
+
+                                        Número de personas
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control form-control-lg"
+                                        id="personas"
+                                        min="1"
+                                        placeholder="Ej. 10"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Destino -->
+
                             <div class="mb-3">
-                                <label for="correo" class="form-label fw-semibold">Correo Electrónico</label>
-                                <input type="email" class="form-control form-control-lg" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                                <label
+                                    for="destino"
+                                    class="form-label fw-semibold">
+
+                                    ¿Qué te gustaría visitar?
+
+                                </label>
+
+                                <select
+                                    class="form-select form-select-lg"
+                                    id="destino"
+                                    required>
+
+                                    <option
+                                        value=""
+                                        selected
+                                        disabled>
+
+                                        Selecciona un recorrido
+
+                                    </option>
+
+                                    <option value="Castillo de Chapultepec">
+                                        Castillo de Chapultepec
+                                    </option>
+
+                                    <option value="Museo Nacional de Antropología">
+                                        Museo Nacional de Antropología
+                                    </option>
+
+                                    <option value="Museo Soumaya y Los Pinos">
+                                        Museo Soumaya y Los Pinos
+                                    </option>
+
+                                    <option value="Centro Histórico">
+                                        Centro Histórico
+                                    </option>
+
+                                    <option value="Teotihuacán">
+                                        Teotihuacán
+                                    </option>
+
+                                    <option value="Ruta de Leyendas">
+                                        Ruta de Leyendas
+                                    </option>
+
+                                    <option value="Coyoacán, San Ángel y Tlalpan">
+                                        Coyoacán, San Ángel y Tlalpan
+                                    </option>
+
+                                    <option value="Otro recorrido">
+                                        Otro / Recorrido personalizado
+                                    </option>
+
+                                </select>
+
                             </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label fw-semibold">Detalles de la Visita (Fecha, número de personas, destino)</label>
-                                <textarea class="form-control form-control-lg" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tus planes..." required></textarea>
+
+
+                            <!-- Comentarios -->
+
+                            <div class="mb-4">
+
+                                <label
+                                    for="mensaje"
+                                    class="form-label fw-semibold">
+
+                                    Comentarios adicionales
+
+                                </label>
+
+                                <textarea
+                                    class="form-control form-control-lg"
+                                    id="mensaje"
+                                    rows="4"
+                                    placeholder="Cuéntanos tus planes, horario aproximado, tipo de grupo, etc."></textarea>
+
                             </div>
-                            <button type="submit" class="btn btn-primary-custom btn-lg w-100 fw-bold">Enviar Solicitud</button>
+
+
+                            <!-- Botón -->
+
+                            <button
+                                type="submit"
+                                class="btn btn-whatsapp-form btn-lg w-100 fw-bold">
+
+                                <i class="fab fa-whatsapp me-2"></i>
+
+                                Solicitar información por WhatsApp
+
+                            </button>
+
                         </form>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4 border-top border-secondary">
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer
+        class="bg-dark text-white text-center py-4 border-top border-secondary">
+
         <div class="container">
-            <p class="mb-0">&copy; 2026 CULTCIMA - Juan Ramón Jiménez Villarreal. Cultura con Imaginación. Todos los derechos reservados.</p>
+
+            <p class="mb-0">
+
+                &copy; 2026 CULTCIMA -
+                Juan Ramón Jiménez Villarreal.
+                Cultura con Imaginación.
+                Todos los derechos reservados.
+
+            </p>
+
         </div>
+
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Leaflet JS (Mapas) -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <!-- Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Leaflet -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- Instagram Embed -->
+    <script
+        async
+        src="https://www.instagram.com/embed.js">
+    </script>
+
+
     <!-- Custom JS -->
     <script src="script.js"></script>
+
 </body>
+
 </html>

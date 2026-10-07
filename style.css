@@ -1,170 +1,671 @@
-/* Variables de Diseño UI */
+
+/* =========================================
+   VARIABLES DE DISEÑO
+========================================= */
+
 :root {
+
     --verde-cultcima: #52B72A;
     --rosa-mexicano: #E91E63;
     --rosa-hover: #c2185b;
+
     --dark-bg: #12181b;
     --dark-card: #1f292d;
+
     --texto-oscuro: #2b2b2b;
+
     --fuente-principal: 'Outfit', sans-serif;
     --fuente-serif: 'Playfair Display', serif;
+
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+
     font-family: var(--fuente-principal);
+
     color: var(--texto-oscuro);
+
     background-color: #fafafa;
+
     overflow-x: hidden;
+
 }
 
-/* Navbar */
+
+/* =========================================
+   NAVBAR
+========================================= */
+
 .bg-dark-custom {
+
     background-color: var(--dark-bg) !important;
+
     backdrop-filter: blur(10px);
+
 }
+
 
 .brand-logo {
+
     height: 42px;
-    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
+
+    filter:
+        drop-shadow(
+            0px 2px 4px rgba(255, 255, 255, 0.3)
+        );
+
 }
+
 
 .nav-link {
+
     font-size: 0.9rem;
+
     letter-spacing: 0.5px;
-    transition: color 0.3s ease;
+
+    transition:
+        color 0.3s ease;
+
 }
+
 
 .nav-link:hover {
+
     color: var(--verde-cultcima) !important;
+
 }
+
 
 .btn-cta {
+
     background-color: var(--rosa-mexicano);
+
     color: white !important;
+
     border-radius: 25px;
+
     padding: 8px 20px !important;
-    transition: transform 0.2s ease, background-color 0.2s ease !important;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease !important;
+
 }
+
 
 .btn-cta:hover {
+
     background-color: var(--rosa-hover);
+
     transform: translateY(-2px);
+
 }
 
-/* Hero Section */
+
+/* =========================================
+   HERO
+========================================= */
+
 .hero-section {
+
     min-height: 85vh;
-    background: url("./rsc/banners/bannerfraseramon.png") no-repeat center center/cover;
+
+    background:
+        url("./rsc/banners/bannerfraseramon.png")
+        no-repeat center center / cover;
+
     position: relative;
+
 }
+
 
 .hero-overlay {
+
     position: absolute;
-    top:0; left:0; width:100%; height:100%;
-    background: linear-gradient(135deg, rgba(81, 255, 0, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(81, 255, 0, 0.4) 0%,
+            rgba(255, 255, 255, 0.2) 100%
+        );
+
 }
+
 
 .hero-quote {
+
     font-family: var(--fuente-serif);
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
+
+    font-size:
+        clamp(
+            1.8rem,
+            4vw,
+            3.2rem
+        );
+
     font-style: italic;
+
     max-width: 800px;
-    text-shadow: 2px 4px 10px rgba(0,0,0,0.7);
+
+    text-shadow:
+        2px 4px 10px rgba(0, 0, 0, 0.7);
+
     line-height: 1.2;
+
 }
 
-/* Botones Personalizados */
+
+/* =========================================
+   BOTONES
+========================================= */
+
 .btn-primary-custom {
+
     background-color: var(--rosa-mexicano);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    padding: 12px 30px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.btn-primary-custom:hover {
+
+    background-color: var(--rosa-hover);
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(233, 30, 99, 0.4);
+
+}
+
+
+.btn-whatsapp-header {
+
+    background-color: #25D366;
+
+    color: white;
+
+    border-radius: 30px;
+
+    padding: 12px 28px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.btn-whatsapp-header:hover {
+
+    background-color: #1ebc57;
+
+    color: white;
+
+}
+
+.btn-instagram {
+    background: linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
     color: white;
     border: none;
-    border-radius: 30px;
-    padding: 12px 30px;
     font-weight: 600;
     transition: all 0.3s ease;
 }
 
-.btn-primary-custom:hover {
-    background-color: var(--rosa-hover);
+.btn-instagram:hover {
     color: white;
-    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 39, 67, 0.25);
 }
 
-.btn-whatsapp-header {
-    background-color: #25D366;
-    color: white;
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-weight: 600;
-    text-decoration: none;
-}
+/* =========================================
+   TÍTULOS
+========================================= */
 
-.btn-whatsapp-header:hover {
-    background-color: #1ebc57;
-    color: white;
-}
-
-/* Títulos de Sección */
 .section-title {
+
     font-size: 2.2rem;
+
     font-weight: 800;
+
     color: var(--dark-bg);
+
     position: relative;
+
     display: inline-block;
+
 }
+
 
 .bg-success-custom {
-    background-color: var(--verde-cultcima) !important;
+
+    background-color:
+        var(--verde-cultcima) !important;
+
 }
 
-/* Cards de Destinos */
+
+/* =========================================
+   CARDS DESTINOS
+========================================= */
+
 .card-destination {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
 }
+
 
 .card-destination:hover {
+
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.15)
+        !important;
+
 }
+
 
 .card-img-wrapper img {
+
     height: 240px;
+
     object-fit: cover;
+
 }
 
-/* Contenedor del Mapa Interactivo */
+
+/* =========================================
+   MAPA
+========================================= */
+
 #mapa-cultural {
+
     height: 480px;
+
     width: 100%;
+
     z-index: 1;
+
 }
 
-/* Galería Grid con Efecto Zoom */
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
+
+/* =========================================
+   PASEOS
+========================================= */
+
+.bg-secondary-custom {
+
+    background-color: var(--dark-card);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
 }
+
+
+.tour-card {
+
+    height: 100%;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.tour-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* =========================================
+   VIDEOS INSTAGRAM
+========================================= */
+
+.video-intro {
+
+    max-width: 700px;
+
+}
+
+
+.instagram-video-card {
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    min-height: 300px;
+
+}
+
+
+.instagram-video-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16);
+
+}
+
+
+/*
+   Evita que el embed de Instagram
+   se desborde horizontalmente.
+*/
+
+.instagram-video-card .instagram-media {
+
+    margin:
+        0 auto !important;
+
+    min-width:
+        280px !important;
+
+    max-width:
+        100% !important;
+
+    width:
+        100% !important;
+
+}
+
+
+/* =========================================
+   GALERÍA
+========================================= */
+
+.galeria-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(240px, 1fr)
+        );
+
+    gap: 16px;
+
+}
+
 
 .galeria-item {
+
     overflow: hidden;
+
     border-radius: 12px;
+
 }
+
 
 .galeria-item img {
+
     width: 100%;
+
     height: 220px;
+
     object-fit: cover;
-    transition: transform 0.4s ease;
+
+    transition:
+        transform 0.4s ease;
+
     cursor: pointer;
+
 }
+
 
 .galeria-item:hover img {
-    transform: scale(1.08);
+
+    transform:
+        scale(1.08);
+
 }
 
-/* Tarjetas de Paseos */
-.bg-secondary-custom {
-    background-color: var(--dark-card);
-    border: 1px solid rgba(255,255,255,0.08);
+
+/* =========================================
+   RESERVACIÓN
+========================================= */
+
+.reservation-card {
+
+    background-color: white;
+
+}
+
+
+.reservation-card .form-control,
+.reservation-card .form-select {
+
+    border:
+        1px solid #dee2e6;
+
+    border-radius:
+        12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.reservation-card .form-control:focus,
+.reservation-card .form-select:focus {
+
+    border-color:
+        var(--verde-cultcima);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(82, 183, 42, 0.15);
+
+}
+
+
+/* =========================================
+   BOTÓN WHATSAPP FORMULARIO
+========================================= */
+
+.btn-whatsapp-form {
+
+    background-color:
+        #25D366;
+
+    border:
+        none;
+
+    color:
+        white;
+
+    border-radius:
+        30px;
+
+    padding:
+        13px 25px;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.btn-whatsapp-form:hover {
+
+    background-color:
+        #1ebc57;
+
+    color:
+        white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 211, 102, 0.3);
+
+}
+
+
+/* =========================================
+   ICONOS DE CONTACTO
+========================================= */
+
+.icon-square {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+
+        padding-top: 15px;
+
+        padding-bottom: 10px;
+
+    }
+
+
+    .btn-cta {
+
+        display: inline-block;
+
+        margin-top: 8px;
+
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .hero-section {
+
+        min-height: 75vh;
+
+    }
+
+
+    .hero-quote {
+
+        font-size: 1.8rem;
+
+        text-align: center;
+
+    }
+
+
+    .section-title {
+
+        font-size: 1.8rem;
+
+    }
+
+
+    .instagram-video-card {
+
+        border-radius: 12px;
+
+    }
+
+
+    .galeria-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .galeria-item img {
+
+        height: 160px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .galeria-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .galeria-item img {
+
+        height: 220px;
+
+    }
+
 }
